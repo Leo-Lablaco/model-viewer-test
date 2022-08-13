@@ -15,7 +15,8 @@
     </style>
 </head>
 <body>
-    <model-viewer 
+    <model-viewer
+    id="ar-link"
     src="assets\NeilArmstrong.glb"
     ios-src="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145"
     ar
@@ -23,9 +24,19 @@
     camera-controls
     auto-rotate
     ></model-viewer>
-    
+
+    <script>
+        const linkElement = document.getElementById("ar-link");
+        linkElement.addEventListener("message", function (event) {   
+    if (event.data == "_apple_ar_quicklook_button_tapped") {
+        document.getElementById("demo").innerHTML = "It is here.";
+    }
+}, false);
+    </script>
+    <p id="demo"></p>
+<!--     
     <a rel="ar" id="CustomAction" href="kids‑slide.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
     <img src="kids-slide-thumbnail.png" alt="test">
-</a>
+</a> -->
 </body>
 </html>
