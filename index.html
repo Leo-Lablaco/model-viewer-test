@@ -15,22 +15,32 @@
     </style>
 </head>
 <body>
-    <model-viewer
+    <a rel="ar" id="ar-anchor" href="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
+        <img src="https://www.seekpng.com/png/full/153-1531574_free-icons-png-red-button-icon-png.png" alt="Test Btn New">
+    </a>
+    <!-- <model-viewer
     src="assets\NeilArmstrong.glb"
     ios-src="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
-    ></model-viewer>
+    ></model-viewer> -->
 
     <script type="text/javascript">
-        const linkElement = document.getElementById("ar-link");
-        linkElement.addEventListener("message", function (event) {   
-        if (event.data == "_apple_ar_quicklook_button_tapped") {
-            window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
-        }
-        }, false);
+        // const linkElement = document.getElementById("ar-link");
+        // linkElement.addEventListener("message", function (event) {   
+        // if (event.data == "_apple_ar_quicklook_button_tapped") {
+        //     window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
+        // }
+        // }, false);
+
+        const el = document.getElementById("ar-anchor");
+el.addEventListener("message", function (event) { 
+  if (event.data == "_apple_ar_quicklook_button_tapped") {
+    window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
+    }
+ }, false);
 
         function myFunction() {
         document.getElementById("demo").innerHTML = "Normal Clicker.";
@@ -40,8 +50,6 @@
     <p id="demo"></p>
     <button onclick="myFunction()">Click me</button>
     
-    <a rel="ar" id="ar-link" href="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
-        <img src="https://www.seekpng.com/png/full/153-1531574_free-icons-png-red-button-icon-png.png" alt="Test Btn New">
-    </a>
+   
 </body>
 </html>
