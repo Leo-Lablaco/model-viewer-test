@@ -29,7 +29,7 @@
         const linkElement = document.getElementById("ar-link");
         linkElement.addEventListener("message", function (event) {   
         if (event.data == "_apple_ar_quicklook_button_tapped") {
-            document.getElementById("demo").innerHTML = "Real Event";
+            window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
         }
         }, false);
 
@@ -41,6 +41,8 @@
     <p id="demo"></p>
     <button onclick="myFunction()">Click me</button>
     
-    <a id="ar-link" rel="ar" href="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">  <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F5a%2FPerspective-Button-Stop-icon.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APerspective-Button-Stop-icon.png&tbnid=2aa8MpIDUXSn4M&vet=12ahUKEwjpzvn25MT5AhVcitgFHe7FAPYQMygCegUIARDlAQ..i&docid=vDVuPKAwGc5q9M&w=512&h=512&q=button&ved=2ahUKEwjpzvn25MT5AhVcitgFHe7FAPYQMygCegUIARDlAQ" alt="Test Btn"></a>
+    <a id="ar-link" rel="ar" href="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
+        <img src="https://www.seekpng.com/png/full/153-1531574_free-icons-png-red-button-icon-png.png" alt="Test Btn New">
+    </a>
 </body>
 </html>
