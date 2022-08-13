@@ -28,15 +28,16 @@
     <script>
         const linkElement = document.getElementById("ar-link");
         linkElement.addEventListener("message", function (event) {   
-    if (event.data == "_apple_ar_quicklook_button_tapped") {
-        document.getElementById("demo").innerHTML = "It is here.";
-    }
-}, false);
+        if (event.data == "_apple_ar_quicklook_button_tapped") {
+            document.getElementById("demo").innerHTML = "Real Event";
+        }
+        }, false);
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Normal Clicker.";
-}
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Normal Clicker.";
+        }
     </script>
+
     <p id="demo"></p>
     <button onclick="myFunction()">Click me</button>
     
