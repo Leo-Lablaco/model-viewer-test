@@ -27,9 +27,14 @@
 
     <script>
         const linkElement = document.getElementById("CustomAction");
+        if (linkElement === null)
+        {
+             document.getElementById("demo").innerHTML = "Null here.";
+        }
         linkElement.addEventListener("message", function (event) {   
+            document.getElementById("demo").innerHTML = "It is here first.";
     if (event.data == "_apple_ar_quicklook_button_tapped") {
-        document.getElementById("demo").innerHTML = "It is here.";
+        document.getElementById("demo").innerHTML = "It is here second.";
     }
 }, false);
 
