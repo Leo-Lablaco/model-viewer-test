@@ -45,11 +45,23 @@ el.addEventListener("message", function (event) {
         function myFunction() {
         document.getElementById("demo").innerHTML = "Normal Clicker.";
         }
+
+        const onQuickLookButtonTapped = (event) => {
+  //window.location.assign("https://www.google.com");
+  window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
+}
+
+    document.querySelector('model-viewer').
+    addEventListener('quick-look-button-tapped', onQuickLookButtonTapped);
     </script>
 
     <p id="demo"></p>
     <button onclick="myFunction()">Click me</button>
-    
+   
+    const onQuickLookButtonTapped = (event) => {
+  window.location.assign("https://www.google.com");
+}
+document.querySelector('model-viewer').addEventListener('quick-look-button-tapped', onQuickLookButtonTapped);
    
 </body>
 </html>
