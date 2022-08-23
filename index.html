@@ -21,9 +21,6 @@
     </style>
 </head>
 <body>
-    <!-- <a rel="ar" id="ar-anchor" href="assets\chair.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
-        <img src="https://www.seekpng.com/png/full/153-1531574_free-icons-png-red-button-icon-png.png" alt="Test Btn New">
-    </a> -->
     <model-viewer
     src="assets\chair.glb"
     ios-src="assets\chair.usdz#callToAction=Go&checkoutTitle=Title%20of%20garment&checkoutSubtitle=Click%20here%20to%20view%20the%20NFT%20details%20on%20SPIN&price=$145"
@@ -32,39 +29,5 @@
     camera-controls
     auto-rotate
     ></model-viewer>
-    <!-- <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://leo-lablaco.github.io/model-viewer-test/assets/chair.glb&mode=ar_only&link=https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/&title=Hello#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">View In AR</a> -->
-
-    <script type="text/javascript">
-        // const linkElement = document.getElementById("ar-link");
-        // linkElement.addEventListener("message", function (event) {   
-        // if (event.data == "_apple_ar_quicklook_button_tapped") {
-        //     window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
-        // }
-        // }, false);
-
-//         const el = document.getElementById("ar-anchor");
-// el.addEventListener("message", function (event) { 
-//   if (event.data == "_apple_ar_quicklook_button_tapped") {
-//     window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
-//     }
-//  }, false);
-
-//         function myFunction() {
-//         document.getElementById("demo").innerHTML = "Normal Clicker.";
-//         }
-
-        const onQuickLookButtonTapped = (event) => {
-        //window.location.assign("https://www.google.com");
-        window.open("https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/", '_blank').focus();
-        }
-
-        document.querySelector('model-viewer').
-        addEventListener('quick-look-button-tapped', onQuickLookButtonTapped);
-    </script>
-<!-- 
-    <p id="demo"></p>
-    <button onclick="myFunction()">Click me</button>
-   
-    -->
-</body>
+   </body>
 </html>
