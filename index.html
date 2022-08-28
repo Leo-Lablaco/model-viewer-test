@@ -16,12 +16,18 @@
 </head>
 <body>
     <model-viewer
-    src="assets\miu-miu-phyton-coat-confirmed-0150.glb?title=Title%20of%20garment&link=https://spin.lablaco.com/tokenizedProduct/5326e1cf-219d-4c24-94eb-b105446fea1c/"
-    ios-src="assets\miu-miu-phyton-coat-confirmed-0150.usdz#callToAction=Go&checkoutTitle=PhytonCoat&checkoutSubtitle=Click%20here%20to%20view%20the%20NFT%20details%20on%20SPIN&price=$145"
+    src="assets\miu-miu-phyton-coat-confirmed-0150.glb?title=Vintage%20Miu%20Miu%20coat&link=https://spin.lablaco.com/"
+    ios-src="assets\miu-miu-phyton-coat-confirmed-0150.usdz#callToAction=Go&checkoutTitle=Vintage%20Miu%20Miu%20coat&checkoutSubtitle=Click%20here%20to%20view%20the%20NFT%20details%20on%20SPIN&price=€1.200"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
     ></model-viewer>
+    <script>
+        const onQuickLookButtonTapped = (event) => {
+        window.location.assign("https://spin.lablaco.com/");
+        }
+        document.querySelector('model-viewer').addEventListener('quick-look-button-tapped', onQuickLookButtonTapped);
+    </script>
 </body>
 </html>
